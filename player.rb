@@ -5,11 +5,11 @@ class Player
     @lives = 3
   end
 
-  def take_life
+  def lose_life
     @lives -= 1
   end
 
-  def is_dead
+  def dead
     @lives == 0
   end
 
@@ -21,8 +21,9 @@ class Player
     if new_question.check_answer?(@userchoice.to_i)
       puts 'Correct!'
     else
-      puts 'Sorry, incorrect'
-      take_life
+      puts 'Sorry, incorrect answer'
+      lose_life
     end
   end
+
 end

@@ -9,14 +9,14 @@ class Game
     puts "New game begins! #{@player_1.name} VS #{@player_2.name}"
     turn
   end
-
+  #i would have liked to impliment a turn count to display but no time
   def turn
     @player_1.new_question
     check_score
     @player_2.new_question
     check_score
     show_stats
-    puts '--------NEW-TURN--------'
+    puts '--------NEXT-TURN--------'
     turn
   end
   
